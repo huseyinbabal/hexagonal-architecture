@@ -1,0 +1,11 @@
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/domain/article/model/Article.java
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/domain/article/usecase/ArticleQuery.java
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/domain/article/ArticleRetrieveUseCase.java
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/domain/article/port/ArticlePort.java
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/domain/article/ArticleCreateUseCase.java
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/domain/article/usecase/ArticleCreate.java
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/domain/article/usecase/ArticleRetrieve.java
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/Application.java
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/domain/article/ArticleQueryUseCase.java
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/infrastructure/adapter/article/persistence/ArticleImMemoryDataAdapter.java
+/Users/huseyinbabal/github/hexagonal-architecture/src/main/java/com/huseyin/hexagonal4j/infrastructure/adapter/article/cli/ArticleCli.java

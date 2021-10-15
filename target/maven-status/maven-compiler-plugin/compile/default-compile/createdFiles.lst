@@ -1,0 +1,15 @@
+com/huseyin/hexagonal4j/domain/article/model/Article.class
+com/huseyin/hexagonal4j/domain/article/usecase/ArticleRetrieve.class
+com/huseyin/hexagonal4j/domain/article/ArticleCreateUseCase.class
+com/huseyin/hexagonal4j/domain/article/ArticleQueryUseCase.class
+com/huseyin/hexagonal4j/domain/article/usecase/ArticleRetrieve$ArticleRetrieveBuilder.class
+com/huseyin/hexagonal4j/domain/article/usecase/ArticleQuery$ArticleQueryBuilder.class
+com/huseyin/hexagonal4j/domain/article/model/Article$ArticleBuilder.class
+com/huseyin/hexagonal4j/domain/article/usecase/ArticleCreate$ArticleCreateBuilder.class
+com/huseyin/hexagonal4j/domain/article/usecase/ArticleQuery.class
+com/huseyin/hexagonal4j/domain/article/port/ArticlePort.class
+com/huseyin/hexagonal4j/infrastructure/adapter/article/persistence/ArticleImMemoryDataAdapter.class
+com/huseyin/hexagonal4j/domain/article/usecase/ArticleCreate.class
+com/huseyin/hexagonal4j/domain/article/ArticleRetrieveUseCase.class
+com/huseyin/hexagonal4j/Application.class
+com/huseyin/hexagonal4j/infrastructure/adapter/article/cli/ArticleCli.class
