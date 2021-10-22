@@ -12,7 +12,7 @@ public class ArticleRetrieveUseCase {
         this.articlePort = articlePort;
     }
 
-    Article retrieve(ArticleRetrieve useCase){
-        return this.articlePort.retrieve(useCase.getId());
+    public Article retrieve(ArticleRetrieve useCase){
+        return this.articlePort.retrieve(useCase.id());
     }
 }

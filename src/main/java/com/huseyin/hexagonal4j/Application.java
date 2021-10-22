@@ -1,26 +1,36 @@
 package com.huseyin.hexagonal4j;
 
 import java.util.List;
+import java.util.logging.Logger;
 
+import com.huseyin.hexagonal4j.domain.article.ArticleCreateUseCase;
+import com.huseyin.hexagonal4j.domain.article.ArticleQueryUseCase;
+import com.huseyin.hexagonal4j.domain.article.ArticleRetrieveUseCase;
 import com.huseyin.hexagonal4j.domain.article.model.Article;
 import com.huseyin.hexagonal4j.infrastructure.adapter.article.cli.ArticleCli;
 import com.huseyin.hexagonal4j.infrastructure.adapter.article.persistence.ArticleImMemoryDataAdapter;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class Application {
+    static Logger log = Logger.getLogger(Application.class.getName());
 
     public static void main(String[] args) {
-        ArticleCli articleCli = new ArticleCli(new ArticleImMemoryDataAdapter());
+
+        ArticleImMemoryDataAdapter articleImMemoryDataAdapter = new ArticleImMemoryDataAdapter();
+
+        ArticleCli articleCli = new ArticleCli(
+            new ArticleCreateUseCase(articleImMemoryDataAdapter),
+            new ArticleRetrieveUseCase(articleImMemoryDataAdapter),
+            new ArticleQueryUseCase(articleImMemoryDataAdapter));
+
         Article article = articleCli.create(5L, "Hexagonal in 5 Minutes",
             "Hexagonal architecture is initially suggested...");
-        log.info("Article is created {}",article);
+        log.info("Article is created " + article);
 
         Article articleDetails = articleCli.retrieve(1L);
-        log.info("Article details {}",articleDetails);
+        log.info("Article details "+articleDetails);
 
         List<Article> result = articleCli.query(5L);
-        log.info("Found articles {}",result);
+        log.info("Found articles " + result);
     }
 
 }

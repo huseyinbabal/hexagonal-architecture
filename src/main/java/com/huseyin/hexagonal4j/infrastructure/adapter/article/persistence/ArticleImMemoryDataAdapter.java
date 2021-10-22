@@ -16,13 +16,9 @@ public class ArticleImMemoryDataAdapter implements ArticlePort {
     @Override
     public Article create(ArticleCreate articleCreate) {
         long id = (articles.size() + 1);
-        Article article = Article.builder()
-            .id(id)
-            .accountId(articleCreate.getAccountId())
-            .title(articleCreate.getTitle())
-            .body(articleCreate.getBody())
-            .build();
-        articles.put(id,article);
+        Article article = new Article(id, articleCreate.accountId(), articleCreate.title(),
+            articleCreate.body());
+        articles.put(id, article);
         return article;
     }
 
@@ -34,7 +30,7 @@ public class ArticleImMemoryDataAdapter implements ArticlePort {
     @Override
     public List<Article> query(ArticleQuery articleQuery) {
         return articles.values().stream()
-            .filter(a-> a.getAccountId().equals(articleQuery.getAccountId()))
+            .filter(a-> a.accountId().equals(articleQuery.accountId()))
             .collect(Collectors.toList());
     }
 }

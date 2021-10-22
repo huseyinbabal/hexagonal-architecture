@@ -1,15 +1,9 @@
 package com.huseyin.hexagonal4j.domain.article.usecase;
 
-import lombok.Builder;
-import lombok.Data;
+public record ArticleQuery(Long accountId) {
 
-@Data
-@Builder
-public class ArticleQuery {
-
-    private Long accountId;
-
-    public static ArticleQuery from(Long accountId){
-        return ArticleQuery.builder().accountId(accountId).build();
+    public static ArticleQuery from(Long accountId) {
+        return new ArticleQuery(accountId);
     }
+
 }

@@ -14,7 +14,7 @@ public class ArticleQueryUseCase {
         this.articlePort = articlePort;
     }
 
-    List<Article> query(ArticleQuery useCase){
+    public List<Article> query(ArticleQuery useCase){
         return articlePort.query(useCase);
     }
 }

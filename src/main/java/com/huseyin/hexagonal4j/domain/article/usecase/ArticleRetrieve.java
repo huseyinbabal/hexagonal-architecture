@@ -1,14 +1,9 @@
 package com.huseyin.hexagonal4j.domain.article.usecase;
 
-import lombok.Builder;
-import lombok.Data;
+public record ArticleRetrieve(Long id) {
 
-@Data
-@Builder
-public class ArticleRetrieve {
-    private Long id;
-
-    public static ArticleRetrieve from(Long id){
-        return  ArticleRetrieve.builder().id(id).build();
+    public static ArticleRetrieve from(Long id) {
+        return new ArticleRetrieve(id);
     }
+
 }

@@ -12,7 +12,7 @@ public class ArticleCreateUseCase {
         this.articlePort = articlePort;
     }
 
-    Article create(ArticleCreate useCase){
+    public Article create(ArticleCreate useCase){
         return this.articlePort.create(useCase);
     }
 }

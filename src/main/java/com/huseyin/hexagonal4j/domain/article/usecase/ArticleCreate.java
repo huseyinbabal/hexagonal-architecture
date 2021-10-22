@@ -1,12 +1,5 @@
 package com.huseyin.hexagonal4j.domain.article.usecase;
 
-import lombok.Builder;
-import lombok.Data;
+public record ArticleCreate(Long accountId, String title, String body) {
 
-@Data
-@Builder
-public class ArticleCreate {
-    private Long accountId;
-    private String title;
-    private String body;
 }

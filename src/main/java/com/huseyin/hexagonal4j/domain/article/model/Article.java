@@ -1,14 +1,10 @@
 package com.huseyin.hexagonal4j.domain.article.model;
 
-import lombok.Builder;
-import lombok.Data;
+public record Article(
+    Long id,
+    Long accountId,
+    String title,
+    String body
+) {
 
-@Data
-@Builder
-public class Article {
-
-    private Long id;
-    private Long accountId;
-    private String title;
-    private String body;
 }
